@@ -1,0 +1,290 @@
+@media only screen and (max-width: 600px) {
+  .nav-main {
+    display: none;
+  }
+  .img-wrapper {
+    display: none;
+  }
+  .brand-logo img {
+    width: 40px;
+  }
+  .nav-text {
+    font-size: 30px;
+  }
+  .login-img-wrapper {
+    display: none;
+  }
+  .title-login{
+    font-size: 1.2rem;
+  }
+  .p-hp{
+    font-size: 0.9rem;
+  }
+  .peringatan{
+    margin: 0px 10px;
+  }
+  .fot{
+    padding-bottom: 100px;
+  }
+  .peringatans h5{
+    font-size: 0.9rem;
+  }
+.back-login {
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 80px;
+  color: black;
+}
+  .card-login {
+    width: 100vw;
+  }
+  .brand-login img {
+    width: 40px;
+    height: 45px;
+  }
+  .sidebar {
+    display: none;
+  }
+  .col {
+    justify-content: flex-start;
+    position: initial;
+  }
+  .konten {
+    margin-left: 20px;
+    padding-top: 20px;
+    margin-right: 20px;
+  }
+  .welcome p {
+    font-size: 10px;
+  }
+  .foot {
+    font-size: 8px;
+  }
+  .welcome img {
+    width: 30%;
+    float: right;
+    margin-right: -10px;
+    margin-top: -130px;
+  }
+  .col {
+    float: none;
+  }
+  .row {
+    display: inline;
+  }
+  .head-dash a {
+    font-size: 12px;
+  }
+
+  .head-dash {
+    margin-left: -40px;
+  }
+  .absen .profil-foto {
+    width: 40px;
+    margin-top: 10px;
+    margin-left: -10px;
+    border-radius: 10px;
+    float: left;
+  }
+  .absen p {
+    margin: 0;
+    font-size: 9px;
+  }
+  .absen-type {
+    margin-top: -50px;
+  }
+  .txt-small {
+    font-size: 10px;
+  }
+  .identitas-wrapper {
+    margin: 0 40px;
+  }
+  .identitas-wrapper p {
+    font-size: 7px;
+    font-weight: 500;
+  }
+  .identitas p {
+    font-size: 12px;
+  }
+  .izin {
+    font-size: 14px;
+  }
+  .logo-card img {
+    width: 40px;
+  } 
+  .card-catatan {
+    width: 100%;
+    padding: 25px 25px;
+    margin: 10px 0px;
+  }
+  .detail-kerjaan h3 {
+    font-size: 15px;
+  }
+  .detail-kerjaan h6 {
+    font-size: 12px;
+  }
+  .kecil-phone {
+    font-size: 10px;
+  }
+  form input+i{
+    position:absolute;
+    left:10px;
+    top:8px;
+    font-size: 13px;
+    color:#777;
+  }
+  table{
+    font-size: 10px;
+  }
+  .cari-input{
+    width: 130px;
+    padding-top: 5px;
+    padding-bottom:5px;
+    padding-left: 30px; 
+    border: solid 1px #adadad ;
+    border-radius: 15px;
+    font-size: 10px;
+  }
+  .kecil-phone-k {
+    font-size: 6px;
+  }
+  .tombol-atur{
+    padding: 3px 8px;
+    font-size: 10px;
+    border-radius: 10px;
+  }
+  .kerjaan-img {
+    float: right;
+    width: 75px;
+    margin-top: -70px;
+  }
+  .peringatan-img {
+    float: right;
+    width: 70px;
+    margin-right: -25px;
+    margin-top: -110px;
+  }
+  .kerjaan h3 {
+    font-size: 17px;
+  }
+  .kerjaan h6 {
+    font-size: 12px;
+  }
+  .profilku h6 {
+    margin-left: 50px;
+    padding-bottom: 2px;
+    font-size: 10px;
+    font-weight: 400;
+    padding-left: 3px;
+    width: 60px;
+  }
+  .profilku p {
+    margin-left: 50px;
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 3px;
+  }
+  .logo-card-2 img {
+    width: 30px;
+  }
+  .ceklis-absen {
+    width: 50px;
+    margin-top: -90px;
+  }
+  .barcode {
+    width: 100px;
+  }
+  .izin{
+    margin-top: 10px;
+    font-size: 0.6rem;
+  }
+  .masuk-btn{
+    margin-top: 10px;
+    font-size: 0.6rem;
+  }
+  .popup {
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+  }
+  .detail-kerjaan {
+    max-width: 90%;
+  }
+  .profilku-img {
+    width: 70px;
+  }
+  .ml-login {
+    margin-left: 10px;
+    margin-right: 15px;
+  }
+  .welcome h5 {
+    font-size: 14px;
+  }
+  .welcome p {
+    max-width: 65%;
+    font-size: 1vw;
+    margin-bottom: 0;
+  }
+  .foot {
+    font-size: 10px;
+  }
+  .float-menu {
+    display: block;
+    transition: 0.5s ease-in-out;
+  }
+  .menu-act{
+    transition: 0.5s ease-in-out;
+    transform: translateY(100px);
+  }
+}
+@media only screen and (max-width: 900px) {
+  .img-wrapper {
+    display: none;
+  }
+
+  .float-menu {
+    display: block;
+  }
+  .sidebar {
+    display: none;
+  }
+  .konten {
+    margin-left: 20px;
+    padding-top: 20px;
+    margin-right: 20px;
+  }
+  .welcome p {
+    font-size: 10px;
+  }
+  .foot {
+    font-size: 8px;
+  }
+  .ml-login {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .card-login {
+    width: 100vw;
+  }
+  .head-dash li {
+    margin-right: 10px;
+  }
+  .head-dash {
+    display: flex;
+    margin-left: -23px;
+  }
+  .card-custom {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 1250px) {
+  .img-wrapper {
+    display: none;
+  }
+  .login-img-wrapper {
+    display: none;
+  }
+  .card-login {
+    width: 100vw;
+  }
+}
