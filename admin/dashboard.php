@@ -44,7 +44,7 @@ if(isset($_GET['cari'])){
            <ul>
             <li>
               <i class="fas fa-home"
-                ><a href="dashboard.html">&emsp;Dashboard</a></i
+                ><a href="dashboard.php">&emsp;Dashboard</a></i
               >
             </li>
             <li>
@@ -148,7 +148,7 @@ if(isset($_GET['cari'])){
           </tbody>
         </table>
       <div class="float-menu fixed-bottom" id="floatMenu">
-        <a href="dashboard.html"><i class="fas fa-home fa-2x"></i></a>
+        <a href="dashboard.php"><i class="fas fa-home fa-2x"></i></a>
         <a href="pekerja.html"><i class="fas fa-id-badge fa-2x"></i></a>
         </div>
       </div>

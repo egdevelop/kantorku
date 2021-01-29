@@ -31,9 +31,9 @@ if($cekAbsen == 0){
   $classIzin = "none";
 }
 
-$dataMasuk = mysqli_query($konek,"SElECT * FROM absen WHERE type = 0 ORDER BY id DESC");
-$dataIzin = mysqli_query($konek,"SElECT * FROM absen WHERE type = 2 ORDER BY id DESC");
-$dataTidak = mysqli_query($konek,"SElECT * FROM absen WHERE type = 1 ORDER BY id DESC");
+$dataMasuk = mysqli_query($konek,"SElECT * FROM absen WHERE akun = '$_SESSION[id]' AND type = 0 ORDER BY id DESC");
+$dataIzin = mysqli_query($konek,"SElECT * FROM absen WHERE akun = '$_SESSION[id]' AND type = 2 ORDER BY id DESC");
+$dataTidak = mysqli_query($konek,"SElECT * FROM absen WHERE akun = '$_SESSION[id]' AND type = 1 ORDER BY id DESC");
 $dataPeringatan = mysqli_query($konek,"SElECT * FROM peringatan WHERE akun = '$_SESSION[id]' AND status = '0' ORDER BY id DESC");
 $jumlahMasuk = mysqli_num_rows($dataMasuk);
 $jumlahIzin = mysqli_num_rows($dataIzin);
