@@ -1,5 +1,10 @@
 <?php
 session_start();
+if(isset($_SESSION['id'])){
+    
+}else{
+    header("location: ../index.php");
+}
 include "../admin/koneksi.php";
 $sekarang = strtotime($jam);
 $pagi = strtotime('07:00:00');
@@ -10,7 +15,7 @@ $id = $_GET['id'];
 
 
 if($pagi < $sekarang && $sekarang < $sore){
-    $cek = mysqli_query($konek,"SELECT * FROM absen where tanggal = '$tanggal'");
+    $cek = mysqli_query($konek,"SELECT * FROM absen where id = '$id' AND tanggal = '$tanggal'");
     $hitung = mysqli_num_rows($cek);
     if ($hitung == 0){
         $query = mysqli_query($konek,"INSERT INTO absen (akun,type,tanggal,jam_masuk) VALUES ('$id',0,'$tanggal','$jam')");

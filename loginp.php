@@ -1,5 +1,8 @@
 <?php
 session_start();
+if(isset($_SESSION['id'])){
+  header("location: type.php");
+}
 include "admin/koneksi.php";
 $username = $_POST['username'];
 $pw = $_POST['pw'];

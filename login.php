@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(isset($_SESSION['id'])){
+  header("location: type.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,9 +29,11 @@
       <div class="row">
         <div class="col">
           <div class="card-login">
-            <a href="index.html"
-              ><i class="fas fa-arrow-left back-login">&emsp;Kembali</i></a
-            >
+            <div class="noner">
+              <a href="index.php"
+                ><i class="fas fa-arrow-left back-login">&emsp;Kembali</i></a
+              >
+            </div>
             <div class="ml-login">
               <div class="brand-login">
                 <img src="assets/images/logo.png" alt="" />
@@ -33,12 +42,12 @@
               <div class="login-head">
                 <h5 class="title-login">Masukan Identitas Anda</h5>
                 <p class="p-hp">
-                  Pastikan anda sundah dapat hak akses ke dalam website ini ya
+                  Pastikan anda sudah dapat hak akses ke dalam website ini ya
                   !!
                 </p>
               </div>
               <form action="loginp.php" method="POST" class="login-form">
-                <p class="label-form">Usernaname</p>
+                <p class="label-form">Username</p>
                 <input
                   class="form-control m-0"
                   type="email"
@@ -58,7 +67,24 @@
                 />
                 <button type="submit" class="btn btn-custom full">Log In</button>
               </form>
-              <a href="#" class="mt-3 lupa">Lupa Password ?</a>
+              <a href="#" class="mt-3 kecil lupa">Lupa Password ?</a>
+              <br>
+              <br>
+              <div class="nonez">
+              <div class="flex mt-1vw">
+              <div class="garis-bawah">
+              </div>
+              <h6>Mari Hubungi</h6>
+              <div class="garis-bawah">
+              </div>
+            </div>
+            <div class="flex mt-1vw">
+                <i class="fab fa-linkedin fa-2x"></i>
+                <i class="fab fa-google fa-2x"></i>
+                <i class="fab fa-facebook fa-2x"></i>
+                <i class="fab fa-instagram fa-2x"></i>
+            </div>
+              </div>
             </div>
           </div>
         </div>

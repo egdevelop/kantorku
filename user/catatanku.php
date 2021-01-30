@@ -1,5 +1,10 @@
 <?php
 session_start();
+if(isset($_SESSION['id'])){
+
+}else{
+    header("location: ../index.php");
+}
 include "../admin/koneksi.php";
 
 $data = mysqli_query($konek,"SELECT * FROM catatan WHERE akun = '$_SESSION[id]'");
@@ -69,11 +74,10 @@ $data = mysqli_query($konek,"SELECT * FROM catatan WHERE akun = '$_SESSION[id]'"
       <div class="card-custom welcome yellow">
         <h5>Selamat Datang <?php echo $_SESSION['nama'] ?></h5>
         <p>
-          Semoga hari mu menyenangkan ini dia data data dari absensi abc putra
-          data ini akan terus terupdate tenang saja!
+Semoga hari mu menyenangkan! Ini adalah data-data dari absensi abc putra yang akan terus terupdate!
         </p>
         <div class="foot">
-          Baca <a href="#">Cara Pengunaan</a> jika kamu kebingunan mengunakan
+          Baca <a href="#">cara penggunaan</a> jika kamu kebingunan mengunakan
           nya ya!
         </div>
         <img src="../assets/images/welcome-img.png" alt="" />

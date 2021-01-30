@@ -1,5 +1,10 @@
 <?php 
 session_start();
+if(isset($_SESSION['id'])){
+
+}else{
+    header("location: ../index.php");
+}
 include "koneksi.php";
 $idp = $_GET['id_p'];
 $dataAkun = mysqli_query($konek,"SELECT * FROM user WHERE id = '$idp'");
@@ -54,7 +59,7 @@ if($d['rekimg'] == 0){
             </li>
             <li>
               <i class="fas fa-id-badge"
-                ><a href="pekerja.html">&emsp;Tambah Pekerja</a></i
+                ><a href="pekerja.php">&emsp;Tambah Pekerja</a></i
               >
             </li>
           </ul>
@@ -121,7 +126,7 @@ if($d['rekimg'] == 0){
       </div>
       <div class="float-menu fixed-bottom" id="floatMenu">
         <a href="dashboard.php"><i class="fas fa-home fa-2x"></i></a>
-        <a href="pekerja.html"><i class="fas fa-id-badge fa-2x"></i></a>
+        <a href="pekerja.php"><i class="fas fa-id-badge fa-2x"></i></a>
         <a href="../logout.php"><i class="fas fa-power-off fa-2x"></i></a>
         </div>
      <div class="fot"></div>

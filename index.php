@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(isset($_SESSION['id'])){
+  header("location: type.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,16 +24,16 @@
     ></script>
     <title>Kantorku</title>
   </head>
-  <body>
-    <div class="container">
+  <body class="home-100">
+    <div class="container fixed-top">
       <header class="main-header">
-        <a href="index.html" class="brand-logo">
+        <a href="index.php" class="brand-logo">
           <img src="assets/images/logo.png" alt="logo-nav" />
           <div class="nav-text">Kantorku</div>
         </a>
         <nav class="nav-main">
           <ul>
-            <li><a class="large" href="index.html">Home</a></li>
+            <li><a class="large" href="index.php">Home</a></li>
             <li><a href="#">About</a></li>
           </ul>
         </nav>
@@ -35,14 +42,28 @@
 
     <main>
       <div class="container home-wrapper">
-        <div class="row align-middle">
-          <div class="col text-home">
-            <h1>Perpect Attendance</h1>
-            <p>Make Everyone Happy</p>
+        <div class="home-flex">
+          <div class="text-home">
+            <h1>Perfect Attendance</h1>
+            <h5>Make Everyone Happy</h5>
+            <p class="text-blue">Absen harus pake kertas? Ngasih kerjaan harus nge wa dulu? Ngabarin selesai harus ke ruangan bos? Pakai kantorku dan buat pengalaman kerjamu jadi lebih baik</p>
             <a href="login.php" class="btn btn-custom sembilan5">Log In</a>
+            <div class="flex mt-1vw">
+              <div class="garis-bawah">
+              </div>
+              <h6>Mari Hubungi</h6>
+              <div class="garis-bawah">
+              </div>
+            </div>
+            <div class="flex mt-1vw">
+                <i class="fab fa-linkedin fa-2x"></i>
+                <i class="fab fa-google fa-2x"></i>
+                <i class="fab fa-facebook fa-2x"></i>
+                <i class="fab fa-instagram fa-2x"></i>
+            </div>
           </div>
-          <div class="col img-wrapper">
-            <img src="assets/images/home-img.png" alt="Home" />
+          <div class="img-wrapper">
+            <img src="assets/images/landing-eg.png" alt="Home" />
           </div>
         </div>
       </div>

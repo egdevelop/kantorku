@@ -1,5 +1,10 @@
 <?php
 session_start();
+if(isset($_SESSION['id'])){
+
+}else{
+    header("location: ../index.php");
+}
 include "koneksi.php";
 
 $dataAnggota = mysqli_query($konek,"SELECT * FROM user");
@@ -49,7 +54,7 @@ if(isset($_GET['cari'])){
             </li>
             <li>
               <i class="fas fa-id-badge"
-                ><a href="pekerja.html">&emsp;Tambah Pekerja</a></i
+                ><a href="pekerja.php">&emsp;Tambah Pekerja</a></i
               >
             </li>
           </ul>
@@ -67,11 +72,10 @@ if(isset($_GET['cari'])){
       <div class="card-custom welcome yellow">
         <h5>Selamat Datang <?php echo $_SESSION['nama'] ?></h5>
         <p>
-          Semoga hari mu menyenangkan ini dia data data dari absensi abc putra
-          data ini akan terus terupdate tenang saja!
+Semoga hari mu menyenangkan! Ini adalah data-data dari absensi abc putra yang akan terus terupdate!
         </p>
         <div class="foot">
-          Baca <a href="#">Cara Pengunaan</a> jika kamu kebingunan mengunakan
+          Baca <a href="#">cara penggunaan</a> jika kamu kebingunan mengunakan
           nya ya!
         </div>
         <img src="../assets/images/welcome-img.png" alt="" />
@@ -149,7 +153,8 @@ if(isset($_GET['cari'])){
         </table>
       <div class="float-menu fixed-bottom" id="floatMenu">
         <a href="dashboard.php"><i class="fas fa-home fa-2x"></i></a>
-        <a href="pekerja.html"><i class="fas fa-id-badge fa-2x"></i></a>
+        <a href="pekerja.php"><i class="fas fa-id-badge fa-2x"></i></a>
+        <a href="../logout.php"><i class="fas fa-power-off fa-2x"></i></a>
         </div>
       </div>
 

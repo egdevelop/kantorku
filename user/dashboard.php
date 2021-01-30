@@ -1,12 +1,17 @@
 <?php
 session_start();
+if(isset($_SESSION['id'])){
+
+}else{
+    header("location: ../index.php");
+}
 include "../admin/koneksi.php";
 $sekarang = strtotime($jam);
 $pagi = strtotime('07:00:00');
 $sore = strtotime('16:30:00');
-$dataAbsen = mysqli_query($konek,"SElECT * FROM absen WHERE tanggal ='$tanggal' ");
+$dataAbsen = mysqli_query($konek,"SElECT * FROM absen WHERE akun = '$_SESSION[id]' AND tanggal ='$tanggal' ");
 $cekAbsen = mysqli_num_rows($dataAbsen);
-$dataPulang = mysqli_query($konek,"SElECT * FROM absen WHERE reason = '-' ");
+$dataPulang = mysqli_query($konek,"SElECT * FROM absen WHERE akun = '$_SESSION[id]' AND reason = '-' ");
 $cekPluang = mysqli_num_rows($dataPulang);
 
 if($pagi < $sekarang && $sekarang < $sore){
@@ -112,11 +117,10 @@ if(isset($_GET['id_p'])){
       <div class="card-custom welcome yellow">
         <h5>Selamat Datang <?php echo $_SESSION['nama'] ?></h5>
         <p>
-          Semoga hari mu menyenangkan ini dia data data dari absensi abc putra
-          data ini akan terus terupdate tenang saja!
+Semoga hari mu menyenangkan! Ini adalah data-data dari absensi abc putra yang akan terus terupdate!
         </p>
         <div class="foot">
-          Baca <a href="#">Cara Pengunaan</a> jika kamu kebingunan mengunakan
+          Baca <a href="#">cara penggunaan</a> jika kamu kebingunan mengunakan
           nya ya!
         </div>
         <img src="../assets/images/welcome-img.png" alt="" />

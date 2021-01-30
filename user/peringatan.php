@@ -1,5 +1,10 @@
 <?php
 session_start();
+if(isset($_SESSION['id'])){
+
+}else{
+    header("location: ../index.php");
+}
 include "../admin/koneksi.php";
 $id_p = $_GET['id_p'];
 $status = '1';
