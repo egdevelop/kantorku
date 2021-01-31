@@ -90,11 +90,6 @@ Semoga hari mu menyenangkan! Ini adalah data-data dari absensi abc putra yang ak
       <div class="row">
         <div class="col">
           <div class="card-custom blue">
-            <div class="masuk-btn">
-              <ul>
-                <li id="masuk-card"><i class="fas fa-plus-circle"></i>&ensp;Lihat data</li>
-              </ul>
-            </div>
             <h6>Jumlah Pekerja</h6>
             <h2><?php echo $jumlahAnggota ?> Orang</h2>
           </div>
@@ -187,29 +182,14 @@ Semoga hari mu menyenangkan! Ini adalah data-data dari absensi abc putra yang ak
             <h6>Data Masuk Kerja</h6>
             <p class="kecil-phone">Hehe ini dia bosKu untuk catatan masuk kamu</p>
           </div>
-          <div class="card-custom white shadow">
-            <div class="identitas">
-              <img
-                src="../assets/images/<?php echo $_SESSION['foto'] ?>"
-                alt=""
-                class="profilku-img"
-              />
-              <p class="m-0">Jhon Smiller</p>
-  
-              <img
-                src="https://i.stack.imgur.com/FxCHC.png"
-                class="barcode"
-                alt=""
-              />
-              <p class="m-0">Backend Developer</p>
-            </div>
-          </div>
           <div class="container-scroll">
-              <li class="card-custom blue">20-02-2021 08:30 19:30 Good</li>
-              <li class="card-custom blue">20-02-2021 08:30 19:30 Good</li>
-              <li class="card-custom blue">20-02-2021 08:30 19:30 Good</li>
-              <li class="card-custom blue">20-02-2021 08:30 19:30 Good</li>
-              <li class="card-custom blue">20-02-2021 08:30 19:30 Good</li>
+          <?php 
+                while($d = mysqli_fetch_array($dataHadir)){
+                  ?>
+                    <li class="card-custom blue"><?php echo $f['tanggal'] ?> <?php echo $f['jam_masuk'] ?> <?php echo $f['jam_pulang'] ?> <?php echo $f['reason'] ?></li>
+                  <?php
+                }
+            ?>
           </div>
         </div>
       </div>
@@ -220,29 +200,14 @@ Semoga hari mu menyenangkan! Ini adalah data-data dari absensi abc putra yang ak
             <h6>Data Izin Kerja</h6>
             <p class="kecil-phone">Hehe ini dia bosKu untuk catatan izin kamu</p>
           </div>
-          <div class="card-custom white shadow">
-            <div class="identitas">
-              <img
-                src="../assets/images/<?php echo $_SESSION['foto'] ?>"
-                alt=""
-                class="profilku-img"
-              />
-              <p class="m-0">Jhon Smiller</p>
-  
-              <img
-                src="https://i.stack.imgur.com/FxCHC.png"
-                class="barcode"
-                alt=""
-              />
-              <p class="m-0">Backend Developer</p>
-            </div>
-          </div>
           <div class="container-scroll">
-              <li class="card-custom yellow">20-02-2021 - - Sakit</li>
-              <li class="card-custom yellow">20-02-2021 - - Sakit</li>
-              <li class="card-custom yellow">20-02-2021 - - Sakit</li>
-              <li class="card-custom yellow">20-02-2021 - - Sakit</li>
-              <li class="card-custom yellow">20-02-2021 - - Sakit</li>
+          <?php 
+                while($f = mysqli_fetch_array($dataIzin)){
+                  ?>
+                    <li class="card-custom yellow"><?php echo $f['tanggal'] ?> <?php echo $f['jam_masuk'] ?> <?php echo $f['jam_pulang'] ?> <?php echo $f['reason'] ?></li>
+                  <?php
+                }
+            ?>
           </div>
         </div>
       </div>
@@ -253,29 +218,14 @@ Semoga hari mu menyenangkan! Ini adalah data-data dari absensi abc putra yang ak
             <h6>Data Izin Kerja</h6>
             <p class="kecil-phone">Hehe ini dia bosKu untuk catatan izin kamu</p>
           </div>
-          <div class="card-custom white shadow">
-            <div class="identitas">
-              <img
-                src="../assets/images/<?php echo $_SESSION['foto'] ?>"
-                alt=""
-                class="profilku-img"
-              />
-              <p class="m-0">Jhon Smiller</p>
-  
-              <img
-                src="https://i.stack.imgur.com/FxCHC.png"
-                class="barcode"
-                alt=""
-              />
-              <p class="m-0">Backend Developer</p>
-            </div>
-          </div>
           <div class="container-scroll">
-              <li class="card-custom red">20-02-2021 - - Sakit</li>
-              <li class="card-custom red">20-02-2021 - - Sakit</li>
-              <li class="card-custom red">20-02-2021 - - Sakit</li>
-              <li class="card-custom red">20-02-2021 - - Sakit</li>
-              <li class="card-custom red">20-02-2021 - - Sakit</li>
+          <?php 
+                while($d = mysqli_fetch_array($dataHadir)){
+                  ?>
+                    <li class="card-custom blue"><?php echo $f['tanggal'] ?> <?php echo $f['jam_masuk'] ?> <?php echo $f['jam_pulang'] ?> <?php echo $f['reason'] ?></li>
+                  <?php
+                }
+            ?>
           </div>
         </div>
       </div>
