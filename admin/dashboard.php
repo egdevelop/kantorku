@@ -18,6 +18,13 @@ $jumlahAnggota = mysqli_num_rows($dataAnggota);
 if(isset($_GET['cari'])){
   $dataAnggota = mysqli_query($konek,"SELECT * FROM user where nama LIkE '%$_GET[cari]%' OR bidang LIkE '%$_GET[cari]%'");
 }
+if(isset($_GET['pesan'])){
+  $pesan = $_GET['pesan'];
+  $pesan2 = $_GET['pesan2'];
+  $c_1 = "pop-act";
+  $c_4 = "active";
+  $c_3 = "menu-act";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -305,6 +312,21 @@ Semoga hari mu menyenangkan! Ini adalah data-data dari absensi abc putra yang ak
           </form>
         </div>
       </div>
+      <div class="popup-container <?php echo $c_4 ?>">
+         <div class="popup">
+         <div class="popup-head">
+          <a class="float-right" href="?reload=true">&times;</a>
+         </div>
+              <div class="center">
+                <img src="../assets/images/success.gif" alt="gif">
+                <h6><?php echo $pesan ?></h6>
+                <p class="kecil-phone"><?php echo $pesan2 ?></p>
+                <div class="d-grid gap-2">
+                  <a href="?reload=true" class="btn btn-outline-success">O K</a>
+                </div>
+              </div>
+         </div>
+         </div>
       <div class="fot"></div>
     </main>
     <!-- Optional JavaScript -->

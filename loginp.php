@@ -27,7 +27,7 @@ $r = mysqli_fetch_array($query);
         header("location:user/dashboard.php");
     }
 }else {
-    header("location:login.php?status=333");
+    header("location:login.php?pesan=Password / Email Salah&pesan2=Periksa kembali pnegentikannya ya siapa tau ada yang salah hehe");
 }
 
 ?>

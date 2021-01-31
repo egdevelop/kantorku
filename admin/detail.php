@@ -23,6 +23,13 @@ if($d['rekimg'] == 0){
 }else {
   $rekimg = "mandiri";
 }
+if(isset($_GET['pesan'])){
+  $pesan = $_GET['pesan'];
+  $pesan2 = $_GET['pesan2'];
+  $c_1 = "pop-act";
+  $c_4 = "active";
+  $c_3 = "menu-act";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -461,6 +468,21 @@ if($d['rekimg'] == 0){
       </div>
       </div>
      </div>
+     <div class="popup-container <?php echo $c_4 ?>">
+         <div class="popup">
+         <div class="popup-head">
+          <a class="float-right" href="?id_p=<?php echo $idp ?>">&times;</a>
+         </div>
+              <div class="center">
+                <img src="../assets/images/success.gif" alt="gif">
+                <h6><?php echo $pesan ?></h6>
+                <p class="kecil-phone"><?php echo $pesan2 ?></p>
+                <div class="d-grid gap-2">
+                  <a href="?id_p=<?php echo $idp ?>" class="btn btn-outline-success">O K</a>
+                </div>
+              </div>
+         </div>
+         </div>
     </main>
     <!-- Optional JavaScript -->
     <script>

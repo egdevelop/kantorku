@@ -6,6 +6,13 @@ if(isset($_SESSION['id'])){
     header("location: ../index.php");
 }
 include "koneksi.php";
+if(isset($_GET['pesan'])){
+  $pesan = $_GET['pesan'];
+  $pesan2 = $_GET['pesan2'];
+  $c_1 = "pop-act";
+  $c_4 = "active";
+  $c_3 = "menu-act";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -86,6 +93,21 @@ Semoga hari mu menyenangkan! Ini adalah data-data dari absensi abc putra yang ak
         <a href="pekerja.php"><i class="fas fa-id-badge fa-2x"></i></a>
         <a href="../logout.php"><i class="fas fa-power-off fa-2x"></i></a>
         </div>
+        <div class="popup-container <?php echo $c_4 ?>">
+         <div class="popup">
+         <div class="popup-head">
+          <a class="float-right" href="?reload=true">&times;</a>
+         </div>
+              <div class="center">
+                <img src="../assets/images/success.gif" alt="gif">
+                <h6><?php echo $pesan ?></h6>
+                <p class="kecil-phone"><?php echo $pesan2 ?></p>
+                <div class="d-grid gap-2">
+                  <a href="?reload=true" class="btn btn-outline-success">O K</a>
+                </div>
+              </div>
+         </div>
+         </div>
     </main>
     <!-- Optional JavaScript -->
     <script>

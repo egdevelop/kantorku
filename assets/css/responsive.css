@@ -38,6 +38,7 @@
   }
   .garis-bawah {
     width: 31.1%;
+    border: solid #adadad 2px;
     margin-bottom: 9px;
   }
   .mt-1vw{
@@ -258,12 +259,20 @@
     margin-top: 10px;
     font-size: 0.6rem;
   }
+  .tidak-masuk{
+    margin-top: 10px;
+    font-size: 0.6rem;
+  }
   .popup {
     max-height: calc(100vh - 100px);
     overflow-y: auto;
+    width: 90%;
   }
   .detail-kerjaan {
     max-width: 90%;
+  }
+  .center img{
+    width: 200px;
   }
   .profilku-img {
     width: 70px;

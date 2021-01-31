@@ -3,6 +3,12 @@ session_start();
 if(isset($_SESSION['id'])){
   header("location: type.php");
 }
+if(isset($_GET['pesan'])){
+  $pesan = $_GET['pesan'];
+  $pesan2 = $_GET['pesan2'];
+  $c_1 = "pop-act";
+  $c_4 = "active";
+}
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +30,7 @@ if(isset($_SESSION['id'])){
     ></script>
     <title>Kantorku</title>
   </head>
-  <body>
+  <body class="<?php $c_1 ?>">
     <main class="login">
       <div class="row">
         <div class="col">
@@ -92,6 +98,21 @@ if(isset($_SESSION['id'])){
           <img src="assets/images/login-img.png" alt="login" />
         </div>
       </div>
+      <div class="popup-container <?php echo $c_4 ?>">
+         <div class="popup">
+         <div class="popup-head">
+          <a class="float-right" href="?reload=true">&times;</a>
+         </div>
+              <div class="center">
+                <img src="assets/images/alert.gif" alt="gif">
+                <h6><?php echo $pesan ?></h6>
+                <p class="kecil-phone"><?php echo $pesan2 ?></p>
+                <div class="d-grid gap-2">
+                  <a href="?reload=true" class="btn btn-outline-danger">O K</a>
+                </div>
+              </div>
+         </div>
+         </div>
     </main>
     <!-- Optional JavaScript -->
     <!-- Option 1: Bootstrap Bundle with Popper.js -->
