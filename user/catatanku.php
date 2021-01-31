@@ -35,7 +35,7 @@ $data = mysqli_query($konek,"SELECT * FROM catatan WHERE akun = '$_SESSION[id]'"
       src="https://kit.fontawesome.com/d8ab9fc50e.js"
       crossorigin="anonymous"
     ></script>
-    <title>Kantorku</title>
+    <link rel="shortcut icon" href="../assets/images/logo.png">    <title>Kantorku</title>
   </head>
   <body>
     <div class="sidebar">

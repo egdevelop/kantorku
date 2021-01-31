@@ -28,6 +28,7 @@ if(isset($_GET['pesan'])){
       src="https://kit.fontawesome.com/d8ab9fc50e.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="shortcut icon" href="assets/images/logo.png">
     <title>Kantorku</title>
   </head>
   <body class="<?php $c_1 ?>">

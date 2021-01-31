@@ -22,6 +22,7 @@ if(isset($_SESSION['id'])){
       src="https://kit.fontawesome.com/d8ab9fc50e.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="shortcut icon" href="assets/images/logo.png">
     <title>Kantorku</title>
   </head>
   <body class="home-100">
