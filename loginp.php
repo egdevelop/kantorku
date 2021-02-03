@@ -19,6 +19,7 @@ $r = mysqli_fetch_array($query);
     $_SESSION['rekening'] = $r['rekening'];
     $_SESSION['rekimg'] = $r['rekimg'];
     $_SESSION['type_user'] = $r['type_user'];
+    $_SESSION['verif'] = $r['verif'];
     $_SESSION['username'] = $username;
     $_SESSION['pw'] = $pw;
     if($r['type_user'] == 1){

@@ -6,13 +6,8 @@ if(isset($_SESSION['id'])){
 if(isset($_GET['pesan'])){
   $pesan = $_GET['pesan'];
   $pesan2 = $_GET['pesan2'];
-  if($pesan == "Berhasil"){
-    $c_1 = "pop-act";
-    $c_5 = "active";
-  }else{
-    $c_1 = "pop-act";
-    $c_4 = "active";
-  }
+  $c_1 = "pop-act";
+  $c_4 = "active";
 }
 ?>
 
@@ -52,34 +47,56 @@ if(isset($_GET['pesan'])){
                 <div class="brand-text">KantorKu</div>
               </div>
               <div class="login-head">
-                <h5 class="title-login">Masukan Identitas Anda</h5>
+                <h5 class="title-login">Daftarkan Identitas Anda</h5>
                 <p class="p-hp">
-                  Pastikan anda sudah dapat hak akses ke dalam website ini ya
+                  Pastikan data anda benar
                   !!
                 </p>
               </div>
-              <form action="loginp.php" method="POST" class="login-form">
-                <p class="label-form">Username</p>
+              <form action="regis.php" method="POST" class="login-form" enctype="multipart/form-data">
                 <input
-                  class="form-control m-0"
+                  class="form-control m-0 mb-2"
                   type="email"
                   name="username"
                   id="username"
-                  placeholder="example@company.com"
+                  placeholder="example@company.com (usernmae)"
                   required
                 />
-                <p class="label-form">Password</p>
                 <input
-                  class="form-control m-0 mb-3"
-                  placeholder="Masukan Password Anda..."
+                  class="form-control m-0 mb-2"
+                  placeholder="Password"
                   type="password"
                   name="pw"
                   id="pw"
                   required
                 />
-                <button type="submit" class="btn btn-custom full">Log In</button>
+                <input
+                  class="form-control m-0 mb-2"
+                  placeholder="Nama"
+                  type="text"
+                  name="nama"
+                  id="pw"
+                  required
+                />
+                <input
+                  class="form-control m-0 mb-2"
+                  placeholder="Bidang Ex : Frontend , Marketing , etc"
+                  type="text"
+                  name="bidang"
+                  id="pw"
+                  required
+                />
+                <p class="m-0">Foto</p>
+                <input
+                  class="form-control m-0 mb-2"
+                  type="file"
+                  name="foto"
+                  id="pw"
+                  required
+                />
+                <button type="submit" class="btn btn-custom full">Daftar</button>
               </form>
-              <a href="register.php" class="mt-3 kecil lupa">Belum Punya akun? klik disini</a>
+              <a href="login.php" class="mt-3 kecil lupa">Punya Akun? Klik disini</a>
               <br>
               <br>
               <div class="nonez">
@@ -115,21 +132,6 @@ if(isset($_GET['pesan'])){
                 <p class="kecil-phone"><?php echo $pesan2 ?></p>
                 <div class="d-grid gap-2">
                   <a href="?reload=true" class="btn btn-outline-danger">O K</a>
-                </div>
-              </div>
-         </div>
-         </div>
-      <div class="popup-container <?php echo $c_5 ?>">
-         <div class="popup">
-         <div class="popup-head">
-          <a class="float-right" href="?reload=true">&times;</a>
-         </div>
-              <div class="center">
-                <img src="assets/images/success.gif" alt="gif">
-                <h6><?php echo $pesan ?></h6>
-                <p class="kecil-phone"><?php echo $pesan2 ?></p>
-                <div class="d-grid gap-2">
-                  <a href="?reload=true" class="btn btn-outline-success">O K</a>
                 </div>
               </div>
          </div>

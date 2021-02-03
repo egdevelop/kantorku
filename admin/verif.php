@@ -6,6 +6,8 @@ if(isset($_SESSION['id'])){
     header("location: ../index.php");
 }
 include "koneksi.php";
+
+$dataAnggota = mysqli_query($konek,"SELECT * FROM user WHERE verif = '0'");
 if(isset($_GET['pesan'])){
   $pesan = $_GET['pesan'];
   $pesan2 = $_GET['pesan2'];
@@ -41,7 +43,7 @@ if(isset($_GET['pesan'])){
           <div class="side-text">KantorKu</div>
         </div>
         <div class="side-main">
-                     <ul>
+           <ul>
             <li>
               <i class="fas fa-home"
                 ><a href="dashboard.php">&emsp;Dashboard</a></i
@@ -79,26 +81,38 @@ Salam dari kami kantorku , semoga hari ini menjadi hari terbaik
         </div>
         <img src="../assets/images/welcome-img.png" alt="" />
       </div>
-     <h6>Tambah Data Pekerja</h6>
-     <form action="ppekerja.php" method="POST" enctype="multipart/form-data">
-        <input type="email" name="username" id="username" class="form-control mb-3"  placeholder="Username" require>
-        <input type="password" name="pw" id="pw" class="form-control mb-3" placeholder="Password" require>
-        <input type="text" name="nama" id="nama" class="form-control mb-3" placeholder="Nama" require>
-        <input type="text" name="bidang" id="bidang" class="form-control mb-3" placeholder="Bidang" require>
-        <input type="num" name="gaji" id="gaji" class="form-control mb-3" placeholder="Gaji" require>
-        <input type="file" name="foto" id="foto" class="form-control mb-3" placeholder="Foto" require>
-        <div class="d-grid gap-2">
-        <button type="submit" class="btn btn-outline-success"> S U B M I T</button>
-        </div>
-     </form>
-      <div class="fot"></div>
-            <div class="float-menu fixed-bottom" id="floatMenu">
+      <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">No</th>
+              <th scope="col">Nama</th>
+              <th scope="col">Bidang</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php
+            while($r = mysqli_fetch_array($dataAnggota)){
+              ?>
+            <tr>
+              <th scope="row"><?php echo $r['id'] ?></th>
+              <td><?php echo $r['nama'] ?></td>
+              <td><?php echo $r['bidang'] ?></td>
+              <td><a href="pverif.php?id_p=<?php echo $r['id'] ?>">Verif</a></td>
+            </tr>
+              <?php
+            }
+            ?>
+          </tbody>
+        </table>
+                    <div class="float-menu fixed-bottom" id="floatMenu">
         <a href="dashboard.php"><i class="fas fa-home fa-2x"></i></a>
         <a href="pekerja.php"><i class="fas fa-id-badge fa-2x"></i></a>
         <a href="verif.php"><i class="fas fa-tasks fa-2x"></i></a>
         <a href="../logout.php"><i class="fas fa-power-off fa-2x"></i></a>
         </div>
-        <div class="popup-container <?php echo $c_4 ?>">
+      <div class="fot"></div>
+      <div class="popup-container <?php echo $c_4 ?>">
          <div class="popup">
          <div class="popup-head">
           <a class="float-right" href="?reload=true">&times;</a>
@@ -116,7 +130,7 @@ Salam dari kami kantorku , semoga hari ini menjadi hari terbaik
     </main>
     <!-- Optional JavaScript -->
     <script>
-
+      
     </script>
     <!-- Option 1: Bootstrap Bundle with Popper.js -->
     <script

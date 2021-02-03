@@ -15,6 +15,9 @@ if(isset($_GET['pesan'])){
 }
 
 $data = mysqli_query($konek,"SELECT * FROM catatan WHERE akun = '$_SESSION[id]'");
+if($_SESSION['verif'] == 0){
+  $notif = "<div class = 'verif'> <p>Akun anda belum di verifikasi silahkan untuk memperifikasi terlebih dahulu ke admin</p> </div>";
+}
 ?>
 
 
@@ -38,6 +41,7 @@ $data = mysqli_query($konek,"SELECT * FROM catatan WHERE akun = '$_SESSION[id]'"
     <link rel="shortcut icon" href="../assets/images/logo.png">    <title>Kantorku</title>
   </head>
   <body>
+  <?php echo $notif ?>
     <div class="sidebar">
       <div class="m-side">
         <div class="brand-side">

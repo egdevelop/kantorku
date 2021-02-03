@@ -7,7 +7,7 @@ if(isset($_SESSION['id'])){
 }
 include "koneksi.php";
 
-$dataAnggota = mysqli_query($konek,"SELECT * FROM user");
+$dataAnggota = mysqli_query($konek,"SELECT * FROM user WHERE verif = '1'");
 $dataHadir = mysqli_query($konek ,"SELECT * FROM absen where tanggal = '$tanggal' AND type = '0'");
 $dataIzin = mysqli_query($konek ,"SELECT * FROM absen where tanggal = '$tanggal' AND type = '2' OR type = '1'");
 
@@ -53,7 +53,7 @@ if(isset($_GET['pesan'])){
           <div class="side-text">KantorKu</div>
         </div>
         <div class="side-main">
-           <ul>
+                     <ul>
             <li>
               <i class="fas fa-home"
                 ><a href="dashboard.php">&emsp;Dashboard</a></i
@@ -62,6 +62,11 @@ if(isset($_GET['pesan'])){
             <li>
               <i class="fas fa-id-badge"
                 ><a href="pekerja.php">&emsp;Tambah Pekerja</a></i
+              >
+            </li>
+            <li>
+              <i class="fas fa-tasks"
+                ><a href="verif.php">&emsp;Verif Data</a></i
               >
             </li>
           </ul>
@@ -152,9 +157,10 @@ Salam dari kami kantorku , semoga hari ini menjadi hari terbaik
             ?>
           </tbody>
         </table>
-      <div class="float-menu fixed-bottom" id="floatMenu">
+            <div class="float-menu fixed-bottom" id="floatMenu">
         <a href="dashboard.php"><i class="fas fa-home fa-2x"></i></a>
         <a href="pekerja.php"><i class="fas fa-id-badge fa-2x"></i></a>
+        <a href="verif.php"><i class="fas fa-tasks fa-2x"></i></a>
         <a href="../logout.php"><i class="fas fa-power-off fa-2x"></i></a>
         </div>
       </div>

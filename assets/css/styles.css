@@ -605,6 +605,15 @@ form input:focus+i{color:#0099ff;}
 .disable {
   display: none;
 }
+.verif{
+  padding: 10px 20px;
+  width: 100vw;
+  background-color: red;
+  color: white;
+}
+.verif p{
+  margin: 0;
+}
 .noner a{
   display: block;
 }

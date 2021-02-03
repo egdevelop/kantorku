@@ -17,7 +17,7 @@ $cek = mysqli_num_rows($data);
 
 if($cek == 0){
     if(move_uploaded_file($tmp, $path)){
-        $simpan = mysqli_query($konek,"INSERT INTO user (username,password,type_user,nama,bidang,gaji,foto)VALUES('$username','$pw',0,'$nama','$bidang','$gaji','$fotobaru')");
+        $simpan = mysqli_query($konek,"INSERT INTO user (username,password,type_user,nama,bidang,gaji,foto,verif)VALUES('$username','$pw',0,'$nama','$bidang','$gaji','$fotobaru',1)");
         if($simpan){
             header("location:pekerja.php?pesan=Berhasil&pesan2=Berhasil memasukan data user");
         }else{

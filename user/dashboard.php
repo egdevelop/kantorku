@@ -61,6 +61,9 @@ if(isset($_GET['id_p'])){
   $c_2 = "";
   $c_3 = "";
 }
+if($_SESSION['verif'] == 0){
+  $notif = "<div class = 'verif'> <p>Akun anda belum di verifikasi silahkan untuk memperifikasi terlebih dahulu ke admin</p> </div>";
+}
 ?>
 
 <!DOCTYPE html>
@@ -83,6 +86,7 @@ if(isset($_GET['id_p'])){
     <link rel="shortcut icon" href="../assets/images/logo.png">    <title>Kantorku</title>
   </head>
   <body class="<?php echo $c_1 ?>">
+  <?php echo $notif ?>
     <div class="sidebar">
       <div class="m-side">
         <div class="brand-side">
