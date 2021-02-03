@@ -97,8 +97,7 @@ if(isset($_GET['pesan'])){
 Semoga hari mu menyenangkan! Ini adalah data-data dari absensi abc putra yang akan terus terupdate!
         </p>
         <div class="foot">
-          Baca <a href="#">cara penggunaan</a> jika kamu kebingunan mengunakan
-          nya ya!
+Salam dari kami kantorku , semoga hari ini menjadi hari terbaik
         </div>
         <img src="../assets/images/welcome-img.png" alt="" />
       </div>

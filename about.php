@@ -45,10 +45,10 @@ if(isset($_SESSION['id'])){
       <div class="container home-wrapper">
         <div class="home-flex">
           <div class="text-home">
-            <h1>Perfect Attendance</h1>
-            <h5>Make Everyone Happy</h5>
-            <p class="text-blue">Absen harus pake kertas? Ngasih kerjaan harus nge wa dulu? Ngabarin selesai harus ke ruangan bos? Pakai kantorku dan buat pengalaman kerjamu jadi lebih baik</p>
-            <a href="login.php" class="btn btn-custom sembilan5">Log In</a>
+            <h1>Kantorku</h1>
+            <h5>Tentang Kami</h5>
+            <p class="text-blue">Kami adalah web utilitas untuk kalian selaku pelaku bisnis untuk memanage data data seperti data pekerjaan, data absen pekerja , data gaji pekerja , dan juga ada log book untuk pekerja . jika rekan semua tertarik kepada kantorku hubungi</p>
+            <a href="mailto:bryandharmawan75@gmail.com" class="btn btn-custom sembilan5">Saya</a>
             <div class="flex mt-1vw">
               <div class="garis-bawah">
               </div>
