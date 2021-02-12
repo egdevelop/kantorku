@@ -86,13 +86,12 @@ if(isset($_GET['pesan'])){
                   id="pw"
                   required
                 />
-                <p class="m-0">Foto</p>
                 <input
                   class="form-control m-0 mb-2"
-                  type="file"
+                  type="text"
                   name="foto"
-                  id="pw"
-                  required
+                  value="default.png"
+                  hidden
                 />
                 <button type="submit" class="btn btn-custom full">Daftar</button>
               </form>

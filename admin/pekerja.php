@@ -86,7 +86,7 @@ Salam dari kami kantorku , semoga hari ini menjadi hari terbaik
         <input type="text" name="nama" id="nama" class="form-control mb-3" placeholder="Nama" require>
         <input type="text" name="bidang" id="bidang" class="form-control mb-3" placeholder="Bidang" require>
         <input type="num" name="gaji" id="gaji" class="form-control mb-3" placeholder="Gaji" require>
-        <input type="file" name="foto" id="foto" class="form-control mb-3" placeholder="Foto" require>
+        <input type="text" name="foto" id="foto" class="form-control mb-3" value="default.png" hidden>
         <div class="d-grid gap-2">
         <button type="submit" class="btn btn-outline-success"> S U B M I T</button>
         </div>

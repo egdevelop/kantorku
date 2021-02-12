@@ -4,7 +4,7 @@ if(isset($_SESSION['id'])){
   header("location: type.php");
 }
 include "admin/koneksi.php";
-$username = $_POST['username'];
+$username = addslashes(trim($_POST['username']));
 $pw = $_POST['pw'];
 
 $query = mysqli_query($konek,"SELECT * FROM user where username = '$username' and password = '$pw'");

@@ -44,9 +44,10 @@ if($_SESSION['verif'] == 0){
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/styles.css" />
     <link rel="stylesheet" href="../assets/css/responsive.css" />
+    <link rel="stylesheet" href="../assets/js/cropper/cropper.min.css">
     <script
       src="https://kit.fontawesome.com/d8ab9fc50e.js"
       crossorigin="anonymous"
@@ -139,11 +140,11 @@ Salam dari kami kantorku , semoga hari ini menjadi hari terbaik
       </div>
       <div class="card-custom white shadow">
         <div class="identitas">
-          <img
-            src="../assets/images/<?php echo $_SESSION['foto'] ?>"
-            alt=""
-            class="profilku-img"
-          />
+            <img
+              src="../assets/images/<?php echo $_SESSION['foto'] ?>"
+              alt=""
+              class="profilku-img"
+            />
           <p class="m-0"><?php echo $_SESSION['nama'] ?></p>
 
           <img
@@ -253,7 +254,7 @@ Salam dari kami kantorku , semoga hari ini menjadi hari terbaik
         
       </div>
     </div>
-
+    
     <!-- Optional JavaScript -->
     <!-- Option 1: Bootstrap Bundle with Popper.js -->
     <script
